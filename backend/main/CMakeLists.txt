@@ -1,0 +1,22 @@
+idf_component_register(SRCS
+                        "main.c"
+                        "nvs_settings.c"
+                        "wifi_manager.c"
+                        "captive_portal.c"
+                        "uart_ctrl.c"
+                        "radio_player.c"
+                        "weather.c"
+                    INCLUDE_DIRS "."
+                    REQUIRES
+                        esp_http_client
+                        esp_http_server
+                        esp_wifi
+                        esp_netif
+                        nvs_flash
+                        lwip
+                        esp_timer
+                        driver
+                        json
+                        espressif__esp_codec_dev
+                        espressif__esp_audio_codec
+                        wekker_protocol)

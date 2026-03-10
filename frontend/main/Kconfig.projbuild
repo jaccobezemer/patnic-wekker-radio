@@ -1,0 +1,42 @@
+menu "Wekker-Radio Configuratie"
+
+    menu "UART Besturing"
+        config LYRAT_UART_BAUDRATE
+            int "Baudrate"
+            default 460800
+            help
+                Baudrate voor UART2 communicatie met de backend (LyraT).
+                Beide apparaten moeten dezelfde waarde gebruiken.
+
+        config LYRAT_UART_TX_PIN
+            int "UART TX GPIO (Waveshare → LyraT RX)"
+            default 15
+            help
+                GPIO waarop de Waveshare commando's verstuurt naar de LyraT.
+
+        config LYRAT_UART_RX_PIN
+            int "UART RX GPIO (LyraT TX → Waveshare)"
+            default 16
+            help
+                GPIO waarop de Waveshare antwoorden ontvangt van de LyraT.
+    endmenu
+
+    menu "Audio"
+        config DEFAULT_VOLUME
+            int "Standaard volume bij opstarten (0-100)"
+            default 10
+            range 0 100
+            help
+                Volume dat bij het opstarten naar de LyraT wordt gestuurd.
+    endmenu
+
+    menu "Display"
+        config DEFAULT_BRIGHTNESS
+            int "Standaard helderheid bij opstarten (0-100)"
+            default 80
+            range 0 100
+            help
+                Helderheid van de LCD-backlight bij opstarten (PWM percentage).
+    endmenu
+
+endmenu

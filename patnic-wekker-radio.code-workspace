@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "name": "patnic-wekker-radio",
+            "path": "."
+        },	
+        {
+            "name": "Backend (ESP32-LyraT)",
+            "path": "backend"
+        },
+        {
+            "name": "Frontend (ESP32-S3)",
+            "path": "frontend"
+        }
+    ]
+}

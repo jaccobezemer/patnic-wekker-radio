@@ -1,0 +1,68 @@
+menu "Wekker-Radio Configuratie"
+
+    menu "WiFi"
+        comment "WiFi credentials worden opgeslagen via de captive portal (NVS)."
+        comment "Bij eerste opstart verschijnt een SoftAP 'wekker-XXXXXX' om in te stellen."
+
+        config DEVICE_HOSTNAME
+            string "Hostname"
+            default "patnic-wekker-radio"
+            help
+                Naam waaronder het apparaat zich registreert bij de DHCP-server.
+                Zichtbaar in de apparatenlijst van de router.
+
+        config SOFTAP_SSID
+            string "SoftAP naam (SSID)"
+            default "patnic-wekker-radio"
+            help
+                Naam van het WiFi-accesspoint bij eerste configuratie.
+                De laatste 3 bytes van het MAC-adres worden automatisch toegevoegd.
+    endmenu
+
+    menu "UART Besturing"
+        config UART_BAUDRATE
+            int "Baudrate"
+            default 460800
+            help
+                Baudrate voor UART2 communicatie met de frontend.
+                Beide apparaten moeten dezelfde waarde gebruiken.
+
+        config UART_RX_PIN
+            int "LyraT UART RX GPIO (ontvangt van Frontend)"
+            default 15
+            help
+                GPIO waarop de LyraT commando's ontvangt (verbonden met TX van de test ESP32).
+
+        config UART_TX_PIN
+            int "LyraT UART TX GPIO (stuurt naar Frontend)"
+            default 13
+            help
+                GPIO waarop de LyraT antwoorden stuurt (verbonden met RX van de test ESP32).
+    endmenu
+
+    menu "Weer (Open-Meteo)"
+        config WEATHER_LATITUDE
+            string "Breedtegraad"
+            default "51.6417"
+            help
+                Breedtegraad van de locatie (decimaal, bijv. 51.6417 voor Oosterhout).
+
+        config WEATHER_LONGITUDE
+            string "Lengtegraad"
+            default "4.8611"
+            help
+                Lengtegraad van de locatie (decimaal, bijv. 4.8611 voor Oosterhout).
+    endmenu
+
+    menu "Audio"
+        config AUDIO_VOLUME
+            int "Standaard volume (0-100)"
+            default 10
+            range 0 100
+
+        config AUDIO_SAMPLE_RATE
+            int "Sample rate (Hz)"
+            default 44100
+    endmenu
+
+endmenu

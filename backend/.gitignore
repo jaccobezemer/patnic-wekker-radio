@@ -1,0 +1,26 @@
+# ESP-IDF build output
+build/
+
+# ESP-IDF gegenereerde configuratie (sdkconfig.defaults is wél gecheckt in)
+sdkconfig
+sdkconfig.old
+
+# ESP-IDF Component Manager (gegenereerde downloads, zoals npm node_modules)
+managed_components/
+
+# VS Code machine-specifieke instellingen (IDF-pad, COM-poort)
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Vim/Emacs swap files
+*.swp
+*.swo
+*~
