@@ -151,7 +151,7 @@ esp_err_t lyrat_ctrl_init(const lyrat_callbacks_t *cbs)
     }
 
     const uart_config_t uart_cfg = {
-        .baud_rate  = LYRAT_UART_BAUDRATE,
+        .baud_rate  = UART_BAUDRATE,
         .data_bits  = UART_DATA_8_BITS,
         .parity     = UART_PARITY_DISABLE,
         .stop_bits  = UART_STOP_BITS_1,
@@ -161,8 +161,8 @@ esp_err_t lyrat_ctrl_init(const lyrat_callbacks_t *cbs)
 
     ESP_ERROR_CHECK(uart_param_config(LYRAT_UART_NUM, &uart_cfg));
     ESP_ERROR_CHECK(uart_set_pin(LYRAT_UART_NUM,
-                                 LYRAT_UART_TX_PIN,
-                                 LYRAT_UART_RX_PIN,
+                                 UART_TX_PIN,
+                                 UART_RX_PIN,
                                  UART_PIN_NO_CHANGE,
                                  UART_PIN_NO_CHANGE));
     ESP_ERROR_CHECK(uart_driver_install(LYRAT_UART_NUM,
@@ -175,7 +175,7 @@ esp_err_t lyrat_ctrl_init(const lyrat_callbacks_t *cbs)
     xTaskCreate(rx_task, "lyrat_rx", RX_TASK_STACK, NULL, RX_TASK_PRIO, NULL);
 
     ESP_LOGI(TAG, "Geïnitialiseerd – TX=GPIO%d RX=GPIO%d %d baud",
-             LYRAT_UART_TX_PIN, LYRAT_UART_RX_PIN, LYRAT_UART_BAUDRATE);
+             UART_TX_PIN, UART_RX_PIN, UART_BAUDRATE);
 
     return ESP_OK;
 }

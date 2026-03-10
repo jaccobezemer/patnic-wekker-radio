@@ -8,9 +8,9 @@
 /* ── Hardware configuratie ──────────────────────────────────────────────── */
 
 #define LYRAT_UART_NUM      UART_NUM_2
-#define LYRAT_UART_TX_PIN   CONFIG_LYRAT_UART_TX_PIN    /* Waveshare GPIO 15 → LyraT RX */
-#define LYRAT_UART_RX_PIN   CONFIG_LYRAT_UART_RX_PIN    /* Waveshare GPIO 16 ← LyraT TX */
-#define LYRAT_UART_BAUDRATE CONFIG_LYRAT_UART_BAUDRATE
+#define UART_TX_PIN   CONFIG_UART_TX_PIN    /* Waveshare GPIO 15 → LyraT RX */
+#define UART_RX_PIN   CONFIG_UART_RX_PIN    /* Waveshare GPIO 16 ← LyraT TX */
+#define UART_BAUDRATE CONFIG_UART_BAUDRATE
 
 /* ── Status type ─────────────────────────────────────────────────────────── */
 

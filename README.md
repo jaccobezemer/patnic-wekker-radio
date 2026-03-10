@@ -132,9 +132,9 @@ Radiostation-URL's worden **altijd door de frontend gepushed** via `CMD_SET_URL`
 
 | Optie                 | Standaard | Beschrijving                                                      |
 |-----------------------|-----------|-------------------------------------------------------------------|
-| `LYRAT_UART_BAUDRATE` | `460800`  | Baudrate UART2 (moet overeenkomen met backend)                    |
-| `LYRAT_UART_TX_PIN`   | `15`      | GPIO Waveshare TX → LyraT RX                                      |
-| `LYRAT_UART_RX_PIN`   | `16`      | GPIO LyraT TX → Waveshare RX                                      |
+| `UART_BAUDRATE`       | `460800`  | Baudrate UART2 (moet overeenkomen met backend)                    |
+| `UART_TX_PIN`         | `15`      | GPIO Waveshare TX → LyraT RX                                      |
+| `UART_RX_PIN`         | `16`      | GPIO LyraT TX → Waveshare RX                                      |
 | `DEFAULT_VOLUME`      | `10`      | Startvolume dat bij opstart naar de LyraT wordt gestuurd (0–100)  |
 | `DEFAULT_BRIGHTNESS`  | `80`      | Helderheid LCD-backlight bij opstarten (0–100)                    |
 

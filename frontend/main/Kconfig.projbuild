@@ -1,20 +1,20 @@
 menu "Wekker-Radio Configuratie"
 
     menu "UART Besturing"
-        config LYRAT_UART_BAUDRATE
+        config UART_BAUDRATE
             int "Baudrate"
             default 460800
             help
                 Baudrate voor UART2 communicatie met de backend (LyraT).
                 Beide apparaten moeten dezelfde waarde gebruiken.
 
-        config LYRAT_UART_TX_PIN
+        config UART_TX_PIN
             int "UART TX GPIO (Waveshare → LyraT RX)"
             default 15
             help
                 GPIO waarop de Waveshare commando's verstuurt naar de LyraT.
 
-        config LYRAT_UART_RX_PIN
+        config UART_RX_PIN
             int "UART RX GPIO (LyraT TX → Waveshare)"
             default 16
             help
