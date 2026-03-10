@@ -25,7 +25,7 @@ Monorepo voor de Patnic internetradio/wekker, bestaande uit een audio backend en
 | LCD Controller   | ST7262                                            |
 | Touch Controller | GT911                                             |
 | Touch I²C        | SDA GPIO 8, SCL GPIO 9                            |
-| UART2            | RX GPIO 16 ← backend TX, TX GPIO 15 → backend RX |
+| UART2            | RX GPIO 16 ← backend TX, TX GPIO 15 → backend RX  |
 
 ---
 
@@ -35,7 +35,7 @@ Monorepo voor de Patnic internetradio/wekker, bestaande uit een audio backend en
 Frontend (Waveshare ESP32-S3)          Backend (ESP32-LyraT)
 ┌────────────────────────────┐         ┌────────────────────────────┐
 │  LVGL UI                   │         │  HTTP streaming            │
-│  lyrat_ctrl (UART driver)  │◄──────►│  uart_ctrl (UART driver)   │
+│  lyrat_ctrl (UART driver)  │◄──────► │  uart_ctrl (UART driver)   │
 │  WiFi (NTP + weer display) │  UART   │  WiFi + captive portal     │
 └────────────────────────────┘         │  Weerdata (Open-Meteo)     │
                                        └────────────────────────────┘
