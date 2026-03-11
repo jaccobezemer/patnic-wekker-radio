@@ -120,10 +120,10 @@ void app_main()
     tp_handle = touch_gt911_init();  
     
     // Initialiseer I2C-sensoren (bus is aangemaakt door touch_gt911_init())
-    // i2c_master_bus_handle_t i2c_bus = DEV_I2C_Get_Bus();
-    // tsl2591_init(i2c_bus, TSL2591_GAIN_MED, TSL2591_ITIME_100MS);
+    i2c_master_bus_handle_t i2c_bus = DEV_I2C_Get_Bus();
+    tsl2591_init(i2c_bus, TSL2591_GAIN_MED, TSL2591_ITIME_100MS);
     // aht20_init(i2c_bus);
-    // xTaskCreate(sensor_task, "sensors", 3072, NULL, 4, NULL);
+    xTaskCreate(sensor_task, "sensors", 3072, NULL, 4, NULL);
 
     // Initialize the Waveshare ESP32-S3 RGB LCD hardware
     panel_handle = waveshare_esp32_s3_rgb_lcd_init();

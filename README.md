@@ -17,6 +17,8 @@ Monorepo voor de Patnic internetradio/wekker, bestaande uit een audio backend en
 | I²S        | MCLK GPIO 0, BCLK GPIO 5, LRCLK GPIO 25, DOUT GPIO 26  |
 | UART2      | TX GPIO 15 → frontend RX, RX GPIO 16 ← frontend TX     |
 
+[ESP32-LyraT v4.3](https://test-fred.readthedocs.io/en/latest/design-guide/board-esp32-lyrat-v4.3.html)
+
 ### Frontend — Waveshare ESP32-S3-Touch-LCD-7B
 
 | Component        | Details                                           |
@@ -26,6 +28,8 @@ Monorepo voor de Patnic internetradio/wekker, bestaande uit een audio backend en
 | Touch Controller | GT911                                             |
 | Touch I²C        | SDA GPIO 8, SCL GPIO 9                            |
 | UART2            | RX GPIO 16 ← backend TX, TX GPIO 15 → backend RX  |
+
+[Waveshare ESP32-S3-Touch-LCD-7B](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-7B)
 
 ---
 
